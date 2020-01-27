@@ -16,19 +16,30 @@
       </div>
 
       <div id="top-navbar-collapse" :class="['collapse', 'navbar-collapse', { in: showCollapsedNav }]">
-        <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav">
           <li v-for="(item, index) in navList" :key="item" :class="{ active: index === activeNavIndex }">
             <a href="#" @click="changeNavIndex(index)">{{ item }}</a>
           </li>
-        </ul>
-      </div>
+      </ul>
+
+<!-- 入口组件 -->
+<div class="navbar-right">
+    <TheEntry/>
+</div>
+</div>
     </div>
   </div>
 </template>
 
 <script>
+
+import TheEntry from '@/components/layouts/TheEntry'
+
 export default {
   name: 'TheHeader',
+    components: {
+    TheEntry
+  },
   data() {
     return {
       logo: {
