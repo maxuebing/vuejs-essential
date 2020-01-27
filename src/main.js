@@ -8,6 +8,8 @@ import App from './App'
 import router from './router'
 // 引入 directives/index.js
 import './directives'
+// 引入 components/index.js
+import './components'
 
 // 设置 false 以阻止 Vue 在启动时生成生产提示
 Vue.config.productionTip = false
