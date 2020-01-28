@@ -6,6 +6,10 @@ Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
+  // linkExactActiveClass 的值是一个类名，用来添加到与当前路由对应的 <router-link> 上，
+  // 以显示当前精确激活的 <router-link>，其默认值是 'router-link-exact-active'，
+  // 我们这里改为 'active' 以利用 Bootstrap 的激活样式。
+  linkExactActiveClass: 'active',
   routes
 })
 
